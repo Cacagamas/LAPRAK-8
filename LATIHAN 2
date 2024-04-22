@@ -1,0 +1,10 @@
+def main():
+    with open('soal.txt', 'r') as file:
+        for i, line in enumerate(file, start=1):
+            pertanyaan, jawaban = map(str.strip, line.split('||'))
+            print(pertanyaan)
+            jawaban_pengguna = input("Jawab: ").strip().lower()
+            print("Jawaban benar!" if jawaban_pengguna == jawaban.lower() else "Jawaban salah!")
+
+if __name__ == "__main__":
+    main()
